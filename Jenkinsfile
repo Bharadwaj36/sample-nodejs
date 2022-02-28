@@ -6,13 +6,13 @@ pipeline {
     stages { 
         stage('SCM Checkout') {
             steps{
-            git 'https://github.com/kaza514/sample-nodejs.git'
+            git 'https://github.com/Bharadwaj36/sample-nodejs.git'
             }
         }
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t kaza514/nodeapp:$BUILD_NUMBER .'
+                sh 'docker build -t bhaardwaj2727/dockerpush:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push kaza514/nodeapp:$BUILD_NUMBER'
+                sh 'docker push bhaardwaj2727/dockerpush:$BUILD_NUMBER'
             }
         }
 }
@@ -32,4 +32,3 @@ post {
         }
     }
 }
-
