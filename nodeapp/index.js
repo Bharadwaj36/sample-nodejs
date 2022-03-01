@@ -2,11 +2,11 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send('{ "response": "This is new fork from Bharadwaj" }');
+    res.send('{ "response": "Today is tuesday and holiday" }');
 });
 
 app.get('/will', function (req, res) {
-    res.send('{ "response": "Get ready to experience" }');
+    res.send('{ "response": "Get ready to experience the bash of celebrations" }');
 });
 app.get('/ready', function (req, res) {
     res.send('{ "response": " Congrats!, There you are!" }');
