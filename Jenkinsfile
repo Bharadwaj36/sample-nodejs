@@ -24,7 +24,11 @@ stages{
 			       sh 'docker push bhaardwaj2727/mypipe:$BUILD_NUMBER'
 			     }
 	 }
-
+	stage('run image from docker'){
+		steps{
+		          sh 'docker run -d --name cont1 -p 8083:8080 bhaardwaj2727/mypipe:$BUILD_NUMBER'
+		     }
+	}
 }
 post{
       always{
