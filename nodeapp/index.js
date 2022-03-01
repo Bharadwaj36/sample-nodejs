@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send('{ "response": "Today is tuesday and holiday" }');
+    res.send('{ "response": "Today is tuesday and day 3 of week" }');
 });
 
 app.get('/will', function (req, res) {
