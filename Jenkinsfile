@@ -26,7 +26,7 @@ stages{
 	 }
 	stage('run image from docker'){
 		steps{
-		        sh 'docker rm -rf mycont'  
+		        sh 'docker rm -f mycont'  
 			sh 'docker run -d --name mycont -p 8083:8080 bhaardwaj2727/mypipe:$BUILD_NUMBER'
 		     }
 	}
